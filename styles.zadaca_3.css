@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  background-color: #587291;
+}
+
+.container {
+  text-align: center;
+}
+
+input {
+  width: 400px;
+  padding: 8px;
+  border: solid 3px;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px;
+  border: solid 3px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+#addTaskBtn {
+  background-color: #c5cef0;
+}
+
+.complete,
+.delete {
+  width: 80px;
+  border: none;
+  border: solid 3px;
+  border-radius: 5px;
+}
+
+.delete {
+  background-color: #ee6352;
+}
+
+.complete {
+  background-color: #57a773;
+}
