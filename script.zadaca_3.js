@@ -1,8 +1,8 @@
 let createBtn = document.getElementById("addTaskBtn");
 let inputTask = document.getElementById("newTask");
+let taskList = document.getElementById("taskList");
 
 function onClickCreateTask() {
-  let taskList = document.getElementById("taskList");
   let listElement = document.createElement("li");
   let inputElement = document.createElement("input");
   let checkBtn = document.createElement("button");
@@ -20,6 +20,9 @@ function onClickCreateTask() {
     return;
   }
 
+  checkBtn.addEventListener("click", onClickComplete);
+  deleteBtn.addEventListener("click", onClickDelete);
+
   taskList.appendChild(listElement);
   listElement.appendChild(inputElement);
   listElement.appendChild(checkBtn);
@@ -33,3 +36,14 @@ function onClickCreateTask() {
 }
 
 createBtn.addEventListener("click", onClickCreateTask);
+
+function onClickComplete(event) {
+  let listElement = event.target.parentElement;
+  listElement.classList.toggle("completed");
+  console.log(listElement.classList);
+}
+
+function onClickDelete(event) {
+  let listElement = event.target.parentElement;
+  taskList.removeChild(listElement);
+}
