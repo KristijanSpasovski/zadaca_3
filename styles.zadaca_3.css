@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Playpen Sans";
+  font-weight: bold;
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,12 +10,19 @@ body {
   background-color: #587291;
 }
 
+h1 {
+  color: #204e4a;
+}
+
 .container {
   text-align: center;
+  margin-top: 2.5%;
+  width: 60%;
+  height: 90%;
 }
 
 input {
-  width: 40%;
+  width: 60%;
   padding: 8px;
   border: solid 3px;
   border-radius: 5px;
@@ -63,6 +71,11 @@ li {
   background-color: #57a773;
 }
 
-li.completed {
+.completed input {
   text-decoration: line-through;
+  color: #57a773;
+}
+
+.completed button {
+  text-decoration: none;
 }
